@@ -36,5 +36,5 @@ jobs:
         with:
           composer_ignore_platform_reqs: true
           composer_require_dev: true
-      - name: PHPUnit (graychen)
-        uses: Graychen/phpunit-action@v1.0.0
+      - name: PHPUnit
+        uses: chindit/actions-phpunit@master
