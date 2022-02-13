@@ -19,6 +19,7 @@ The easiest way to get started with Chalk is through composer:
 composer require "dklis/chalk-php"
 ```
 
+
 ## Getting Started
 Work in progress
 ## Documentation
