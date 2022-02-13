@@ -2,7 +2,6 @@
     "name": "dklis/chalk-php",
     "description": "PHP library to beautify your CLI messages",
     "license": "BSD-3-Clause",
-    "version": "1.0.0",
     "authors": [
         {
             "name": "Dimitris Klisiarchis",
