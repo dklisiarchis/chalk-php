@@ -2,6 +2,9 @@
 
 Chalk is a small PHP library for adding ANSI colors and other text transformations to CLI text output.
 
+[![Build & Test](https://github.com/dklisiarchis/chalk-php/actions/workflows/php.yml/badge.svg)](https://github.com/dklisiarchis/chalk-php/actions/workflows/php.yml)
+ [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg?style=flat-square)](https://php.net/)
+
 ## Requirements
 
 Chalk requires PHP version 8.1 or greater.
