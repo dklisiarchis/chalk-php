@@ -16,7 +16,7 @@ Chalk requires PHP version 8.1 or greater.
 The easiest way to get started with Chalk is through composer:
 ```
 # Install as dependency
-composer require "dklis/chalk"
+composer require "dklis/chalk-php"
 ```
 
 ## Getting Started
