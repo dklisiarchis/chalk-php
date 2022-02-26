@@ -8,7 +8,7 @@ use Dklis\Chalk\Contracts\ChalkInterface;
 use Dklis\Chalk\Contracts\ColorPaletteInterface;
 
 use function is_callable;
-use function call_user_func_array;
+use function call_user_func;
 use function array_reduce;
 use function sprintf;
 use function str_replace;
@@ -25,7 +25,7 @@ abstract class ChalkTransforms implements ChalkInterface
             $transforms,
             static function (?string $acc, string $transformation) use ($message) {
                 if (is_callable([Chalk::class, $transformation])) {
-                    return $acc .= call_user_func_array([Chalk::class, $transformation], ['']);
+                    return $acc .= call_user_func([Chalk::class, $transformation]);
                 }
 
                 return $acc .= '';

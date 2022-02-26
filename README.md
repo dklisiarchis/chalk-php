@@ -63,5 +63,9 @@ $multiTransform = Chalk::transform('A message', 'blue', 'redBG', 'underscore', '
 | Underline      | 4m   |
 
 
+## Adding your own
+To use a custom color palette, simply create a string backed Enum implementing `\Dklis\Chalk\Contracts\ColorPaletteInterface`
+and call the `Chalk::create` function to create your messages.
+
 ## Issues
 Bug reports and feature requests can be submitted on the [Github Issue Tracker](https://github.com/dklisiarchis/chalk-php/issues).
