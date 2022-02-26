@@ -5,7 +5,7 @@ namespace Dklis\Chalk\Tests\Unit;
 
 use Dklis\Chalk\Chalk;
 use Dklis\Chalk\Contracts\ColorPaletteInterface;
-use Dklis\Chalk\DefaultColorPalette;
+use Dklis\Chalk\Lib\DefaultColorPalette;
 use PHPUnit\Framework\TestCase;
 
 final class ChalkColorsTest extends TestCase

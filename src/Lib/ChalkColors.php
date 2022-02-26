@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Dklis\Chalk\Lib;
 
 use Dklis\Chalk\Contracts\ColorPaletteInterface;
-use Dklis\Chalk\DefaultColorPalette;
+use Dklis\Chalk\Lib\DefaultColorPalette;
 use Dklis\Chalk\Lib\ChalkTransforms;
 
 abstract class ChalkColors extends ChalkTransforms

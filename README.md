@@ -20,14 +20,48 @@ composer require "dklis/chalk-php"
 ```
 
 
-## Getting Started
-Work in progress
-## Documentation
-Work in progress
+## Usage
+```php
+<?php
+use Dklis\Chalk\Chalk;
+
+// ...
+
+// Foreground color
+$redMessage = Chalk::red('A red message');
+
+// Background color
+$redBgMessage = Chalk::redBG('A message with red background');
+
+// Transformations
+$bold = Chalk::bold('A bold message');
+$underline = Chalk::underline('An underlined message');
+
+
+// Multiple transformations
+$multiTransform = Chalk::transform('A message', 'blue', 'redBG', 'underscore', 'bold')
+
+```
+
+## Default colors
+| Colors  | Code |
+|---------|------|
+| Red     | 31m  |
+| Blue    | 34m  |
+ | Green   | 32m  |
+ | Black   | 30m  | 
+| Orange  | 33m  |
+ | Magenta | 35m  |
+| Cyan    | 36m  |
+| Gray    | 37m  |
+
+
+## Default transformations
+| Transformation | Code |
+|----------------|------|
+| Bold           | 1m   |
+| Underline      | 4m   |
+
 
 ## Issues
 Bug reports and feature requests can be submitted on the [Github Issue Tracker](https://github.com/dklisiarchis/chalk-php/issues).
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for information.

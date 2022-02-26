@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Dklis\Chalk;
+namespace Dklis\Chalk\Lib;
 
 use Dklis\Chalk\Contracts\ColorPaletteInterface;
 
