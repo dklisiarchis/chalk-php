@@ -6,6 +6,7 @@ namespace Dklis\Chalk;
 use Dklis\Chalk\Contracts\ColorPaletteInterface;
 use Dklis\Chalk\Exception\ColorNotFoundException;
 use Dklis\Chalk\Lib\ChalkColors;
+use Dklis\Chalk\Lib\DefaultColorPalette;
 
 use function str_replace;
 use function mb_substr;
