@@ -38,6 +38,52 @@ final class ChalkTransformTest extends TestCase
 
 
     /**
+     * @dataProvider multiTransformDataProvider
+     */
+    public function testMultipleTransformations(string $input, array $transformations, string $expected): void
+    {
+        $this->assertSame(
+            escapeshellcmd($expected),
+            escapeshellcmd(Chalk::transform($input, ...$transformations)),
+            'Failed to apply multiple transformations with a single call'
+        );
+    }
+
+    /**
+     * @return array[]
+     */
+    public function multiTransformDataProvider(): array
+    {
+        return [
+            [
+                'lorem ipsum',
+                ['bold', 'green', 'redBG'],
+                sprintf(
+                    '%s%s%s%s%s',
+                    ChalkInterface::BOLD,
+                    DefaultColorPalette::GREEN->foreground(),
+                    DefaultColorPalette::RED->background(),
+                    'lorem ipsum',
+                    ColorPaletteInterface::MOD_END
+                )
+            ],
+            [
+                'lorem ipsum',
+                ['red', 'blueBG', 'underline', 'bold'],
+                sprintf(
+                    '%s%s%s%s%s%s',
+                    DefaultColorPalette::RED->foreground(),
+                    DefaultColorPalette::BLUE->background(),
+                    ChalkInterface::UNDERLINE,
+                    ChalkInterface::BOLD,
+                    'lorem ipsum',
+                    ColorPaletteInterface::MOD_END
+                )
+            ]
+        ];
+    }
+
+    /**
      * @return array[]
      */
     public function boldTextTestDataProvider(): array
@@ -47,7 +93,9 @@ final class ChalkTransformTest extends TestCase
                 'test bold',
                 sprintf(
                     '%s%s%s',
-                    ChalkInterface::BOLD, 'test bold', ColorPaletteInterface::MOD_END
+                    ChalkInterface::BOLD,
+                    'test bold',
+                    ColorPaletteInterface::MOD_END
                 )
             ]
         ];
